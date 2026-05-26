@@ -1,9 +1,9 @@
 # HERON-UK-02-004-CongenitalAorticStenosis
 <img src="https://img.shields.io/badge/Study%20Status-Started-blue.svg" alt="Study Status: Started">
 
-- **Study title**: HERON-UK-02-004-CongenitalAorticStenosis
+- **Study title**: Profiles of children with congenital aortic stenosis and their outcomes at Great Ormond Street Hospital 
 - **Study start date**: 2026-05-26
-- **Study leads**: [Add study leads]
+- **Study leads**: Moronfoluwa Akintola, Lydia Briggs, Prasiddha Khadka, Marta Alcalde, Martí Català, Daniel Prieto-Alhambra, Danielle Newby, Albert Prats-Uribe, Edward Burn
 - **Study end date**: [Ongoing]
 - **Publications**: [None yet]
 
