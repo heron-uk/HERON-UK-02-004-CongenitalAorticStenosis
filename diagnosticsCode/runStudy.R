@@ -19,7 +19,7 @@ study_age_groups <- list(
 # run ----
 source(here("cohorts", "instantiateCohorts.R"))
 omopgenerics::logMessage("Running PhenotypeDiagnostics for study cohorts")
-diagnostics_study <- phenotypeDiagnostics(
+diagnostics_study <- PhenotypeR::phenotypeDiagnostics(
   cdm$study_cohorts,
   survival = FALSE,
   cohortSample = 20000,
@@ -27,7 +27,7 @@ diagnostics_study <- phenotypeDiagnostics(
   populationSample = NULL
 )
 
-exportSummarisedResult(
+omopgenerics::exportSummarisedResult(
   diagnostics_study,
   minCellCount = minCellCount,
   fileName = "phenotyper_study_results_{cdm_name}_{date}.csv",
@@ -35,7 +35,7 @@ exportSummarisedResult(
 )
 
 omopgenerics::logMessage("Running PhenotypeDiagnostics for congenital aortic valve disease")
-diagnostics_congenital_aortic_valve_disease <- phenotypeDiagnostics(
+diagnostics_congenital_aortic_valve_disease <- PhenotypeR::phenotypeDiagnostics(
   cdm$congenital_aortic_valve_disease,
   survival = FALSE,
   cohortSample = 20000,
@@ -43,10 +43,10 @@ diagnostics_congenital_aortic_valve_disease <- phenotypeDiagnostics(
   populationSample = NULL
 )
 
-exportSummarisedResult(
+omopgenerics::exportSummarisedResult(
   diagnostics_congenital_aortic_valve_disease,
   minCellCount = minCellCount,
   fileName = "phenotyper_congenital_aortic_valve_disease_results_{cdm_name}_{date}.csv",
   path = resultsFolder
 )
-logMessage("Finished")
+omopgenerics::logMessage("Finished")
