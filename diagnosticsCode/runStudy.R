@@ -7,6 +7,15 @@ if(!dir.exists(resultsFolder)){
 createLogFile(logFile = tempfile(pattern = "log_{date}_{time}"))
 logMessage("LOG CREATED")
 
+# Define diagnostics settings ----
+study_period <- c(as.Date("2019-04-19"), NA)
+study_age_groups <- list(
+  c(0, 0),
+  c(1, 3),
+  c(4, 12),
+  c(13, 17)
+)
+
 # run ----
 source(here("cohorts", "instantiateCohorts.R"))
 info(logger, "- Running PhenotypeDiagnostics for study cohorts")
