@@ -92,7 +92,7 @@ cdm <- bind(cdm$study_cohorts,
 
 # add demographics
 cdm$study_cohorts <- cdm$study_cohorts |> 
-  addDemographics(ageGroup = study_age_groups)
+  PatientProfiles::addDemographics(ageGroup = study_age_groups)
 
 
 # Outcome cohorts - characterisation ----
@@ -105,7 +105,7 @@ cdm$outcome_cohorts_characterisation <- cdm$outcome_cohorts |>
                          name = "outcome_cohorts_characterisation")
 
 cdm$outcome_cohorts_characterisation <- cdm$outcome_cohorts_characterisation |> 
-  addDemographics(ageGroup = study_age_groups)
+  PatientProfiles::addDemographics(ageGroup = study_age_groups)
 
 cdm <- bind(cdm$study_cohorts,
             cdm$outcome_cohorts_characterisation,

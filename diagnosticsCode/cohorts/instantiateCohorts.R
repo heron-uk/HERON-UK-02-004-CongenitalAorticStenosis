@@ -52,7 +52,7 @@ cdm$study_cohorts <- cdm$study_cohorts |>
 	)
 
 cdm$study_cohorts <- cdm$study_cohorts |>
-	CohortConstructor::addDemographics(ageGroup = study_age_groups)
+	PatientProfiles::addDemographics(ageGroup = study_age_groups)
 
 # Additional diagnostics cohort -----
 congenital_aortic_valve_disease_codes <- list(
@@ -74,4 +74,4 @@ cdm$congenital_aortic_valve_disease <- CohortConstructor::conceptCohort(
 	CohortConstructor::requireInDateRange(
 		dateRange = study_period
 	) |>
-	CohortConstructor::addDemographics(ageGroup = study_age_groups)
+	PatientProfiles::addDemographics(ageGroup = study_age_groups)
