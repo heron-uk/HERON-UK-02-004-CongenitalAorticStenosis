@@ -18,7 +18,7 @@ study_age_groups <- list(
 
 # run ----
 source(here("cohorts", "instantiateCohorts.R"))
-info(logger, "- Running PhenotypeDiagnostics for study cohorts")
+omopgenerics::logMessage("Running PhenotypeDiagnostics for study cohorts")
 diagnostics_study <- phenotypeDiagnostics(
   cdm$study_cohorts,
   survival = FALSE,
@@ -34,7 +34,7 @@ exportSummarisedResult(
   path = resultsFolder
 )
 
-info(logger, "- Running PhenotypeDiagnostics for congenital aortic valve disease")
+omopgenerics::logMessage("Running PhenotypeDiagnostics for congenital aortic valve disease")
 diagnostics_congenital_aortic_valve_disease <- phenotypeDiagnostics(
   cdm$congenital_aortic_valve_disease,
   survival = FALSE,
