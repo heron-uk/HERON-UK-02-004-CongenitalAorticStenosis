@@ -21,10 +21,14 @@ source(here("cohorts", "instantiateCohorts.R"))
 omopgenerics::logMessage("Running PhenotypeDiagnostics for study cohorts")
 diagnostics_study <- PhenotypeR::phenotypeDiagnostics(
   cdm$study_cohorts,
-  survival = FALSE,
-  cohortSample = 20000,
-  matchedSample = NULL,
-  populationSample = NULL
+  cohortDiagnostics = list(
+    cohortSurvival = FALSE,
+    cohortSample = 20000,
+    matchedSample = NULL
+  ),
+  populationDiagnostics = list(
+    populationSample = NULL
+  )
 )
 
 omopgenerics::exportSummarisedResult(
@@ -37,10 +41,14 @@ omopgenerics::exportSummarisedResult(
 omopgenerics::logMessage("Running PhenotypeDiagnostics for congenital aortic valve disease")
 diagnostics_congenital_aortic_valve_disease <- PhenotypeR::phenotypeDiagnostics(
   cdm$congenital_aortic_valve_disease,
-  survival = FALSE,
-  cohortSample = 20000,
-  matchedSample = NULL,
-  populationSample = NULL
+  cohortDiagnostics = list(
+    cohortSurvival = FALSE,
+    cohortSample = 20000,
+    matchedSample = NULL
+  ),
+  populationDiagnostics = list(
+    populationSample = NULL
+  )
 )
 
 omopgenerics::exportSummarisedResult(
